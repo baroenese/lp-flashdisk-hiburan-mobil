@@ -443,7 +443,7 @@ export default function Sandisk() {
                             width={400}
                         />
                         <div className="space-y-4">
-                            <div className="inline-block rounded-lg dark:bg-red-100 px-3 py-1 text-sm bg-red-500">Miliki Segera</div>
+                            <div className="inline-block rounded-lg dark:bg-red-100 px-3 py-1 text-sm bg-red-500 sr-only">Miliki Segera</div>
                             <h2 className="text-red-500 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                                 Flashdisk Hiburan Mobil
                             </h2>
@@ -464,6 +464,15 @@ export default function Sandisk() {
                                     Flashdisk Original 100&#37;
                                 </li>
                             </ul>
+                            <div className="mt-6">
+                                <Link
+                                    className="inline-flex h-10 items-center justify-center rounded-md bg-red-500 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
+                                    href={`https://wa.me/${CONTACT_WHATSAPP}?text=Halo+admin+Flashdisk+Hiburan+Mobil`}
+                                    target="_blank"
+                                >
+                                    Pesan Sekarang
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </section>
