@@ -5,6 +5,7 @@ const nextConfig = {
         unoptimized: true,
     },
     distDir: "website",
+    basePath: "/website-flashdisk-hiburan-mobil"
 };
 
 export default nextConfig;
