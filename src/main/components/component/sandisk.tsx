@@ -39,13 +39,16 @@ import testi2 from "@/main/assets/testi/2.jpg"
 import testi3 from "@/main/assets/testi/3.jpg"
 import testi4 from "@/main/assets/testi/4.jpg"
 import testi5 from "@/main/assets/testi/5.jpg"
+import testi6 from "@/main/assets/testi/6.jpg"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 
+const CONTACT_WHATSAPP =  `6285394107773`
+
 const FormSchema = z.object({
     name: z.string().min(1).max(100),
-    phone: z.string().min(10).max(20),
+    phone: z.string().optional(),
     message: z.string().min(1).max(255),
 })
 
@@ -55,13 +58,16 @@ export default function Sandisk() {
     const {
         register,
         handleSubmit,
+        formState: {
+            errors,
+        },
     } = useForm<FormType>({
         resolver: zodResolver(FormSchema),
     })
 
     const createWhatsappLink = (data: FormType) => {
-        const link = new URL(`https://wa.me/${data.phone}`)
-        link.searchParams.append("text", `Halo ${data.name}\n${data.message}`)
+        const link = new URL(`https://wa.me/${CONTACT_WHATSAPP}`)
+        link.searchParams.append("text", `${data.message}\n\n${data.name}`)
         return link.href
     }
 
@@ -106,7 +112,8 @@ export default function Sandisk() {
                                 <div className="mt-6">
                                     <Link
                                         className="inline-flex h-10 items-center justify-center rounded-md bg-red-500 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
-                                        href="#"
+                                        href={`https://wa.me/${CONTACT_WHATSAPP}?text=Halo+admin+Flashdisk+Hiburan+Mobil`}
+                                        target="_blank"
                                     >
                                         Pesan Sekarang
                                     </Link>
@@ -149,10 +156,10 @@ export default function Sandisk() {
                                 />
                                 <h3 className="text-lg font-bold text-red-500">Flashdisk Hiburan Mobil - 32GB</h3>
                                 <p className="text-sm text-gray-300 dark:text-gray-400">
-                                    2000+ Lagu dan video dalam sebuah flashdisk.
+                                    Flashdisk Original 100&#37;, format Video Mp4/Divx/MPG {`(Menyesuaikan dengan Head Unit)`}, dan bisa dijalankan di TV, Laptop, dll.
                                 </p>
-                                <div className="flex flex-col lg:flex-row justify-between">
-                                    <div>Rp160.000</div>
+                                <div className="flex flex-col lg:flex-row justify-between sm:items-center">
+                                    <div className="text-base sm:text-lg tracking-wide font-semibold text-white leading-6">Rp160.000</div>
                                     <div>
                                         <Link
                                             className="inline-flex h-8 w-full items-center justify-center rounded-md bg-red-500 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
@@ -173,10 +180,10 @@ export default function Sandisk() {
                                 />
                                 <h3 className="text-lg font-bold text-red-500">Flashdisk Hiburan Mobil - 64GB</h3>
                                 <p className="text-sm text-gray-300 dark:text-gray-400">
-                                    3000+ Lagu dan video dalam sebuah flashdisk.
+                                    Flashdisk Original 100&#37;, format Video Mp4/Divx/MPG {`(Menyesuaikan dengan Head Unit)`}, dan bisa dijalankan di TV, Laptop, dll.
                                 </p>
-                                <div className="flex flex-col lg:flex-row justify-between">
-                                    <div>Rp185.000</div>
+                                <div className="flex flex-col lg:flex-row justify-between sm:items-center">
+                                    <div className="text-base sm:text-lg tracking-wide font-semibold text-white leading-6">Rp185.000</div>
                                     <div>
                                         <Link
                                             className="inline-flex h-8 w-full items-center justify-center rounded-md bg-red-500 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
@@ -206,32 +213,10 @@ export default function Sandisk() {
                             <div className="flex flex-col justify-center space-y-4">
                                 <div className="grid gap-4">
                                     <div className="flex flex-col items-start gap-2 rounded-lg bg-gray-900 p-4 shadow-lg">
-                                        <div className="flex items-center gap-2">
-                                            <picture>
-                                                <img
-                                                    alt="Avatar"
-                                                    className="h-10 w-10 rounded-full"
-                                                    height="40"
-                                                    src="/placeholder.svg"
-                                                    style={{
-                                                        aspectRatio: "40/40",
-                                                        objectFit: "cover",
-                                                    }}
-                                                    width="40"
-                                                />
-                                            </picture>
-                                            <div>
-                                                <h3 className="text-lg font-semibold">@**9</h3>
-                                                <p className="text-sm text-gray-400">Flashdisk Hiburan Mobil</p>
-                                            </div>
-                                        </div>
-                                        <p className="text-gray-400">
-                                            {`"Mantap kualitas video dan lagu mp3nya gak pecah di headunit ,thanksq gan moga makin laris lapaknya."`}
-                                        </p>
                                         <div className="mt-2 rounded-lg border border-slate-200 border-gray-800 dark:border-slate-800">
                                             <Image
                                                 src={testi1}
-                                                alt="@**9"
+                                                alt="Testimoni pelanggan flashdisk hiburan mobil"
                                                 height={310}
                                                 width={550}
                                                 className="mx-auto aspect-video overflow-hidden rounded-t-lg object-cover object-center sm:w-full"
@@ -308,6 +293,17 @@ export default function Sandisk() {
                             </div>
                             <div className="flex flex-col justify-center space-y-4">
                                 <div className="grid gap-4">
+                                    <div className="flex flex-col items-start gap-2 rounded-lg bg-gray-900 p-4 shadow-lg">
+                                        <div className="mt-2 rounded-lg border border-slate-200 border-gray-800 dark:border-slate-800">
+                                            <Image
+                                                src={testi6}
+                                                alt="Testi pelanggan flashdisk hiburan mobil"
+                                                height={310}
+                                                width={550}
+                                                className="mx-auto aspect-video overflow-hidden rounded-t-lg object-cover object-center sm:w-full"
+                                            />
+                                        </div>
+                                    </div>
                                     <div className="flex flex-col items-start gap-2 rounded-lg bg-gray-900 p-4 shadow-lg">
                                         <div className="flex items-center gap-2">
                                             <picture>
@@ -459,7 +455,7 @@ export default function Sandisk() {
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <CheckIcon className="h-4 w-4 text-red-500 dark:text-red-400" />
-                                    Bisa dijalankandi TV, Laptop, dll
+                                    Bisa dijalankan di TV, Laptop, dll
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <CheckIcon className="h-4 w-4 text-red-500 dark:text-red-400" />
@@ -485,9 +481,19 @@ export default function Sandisk() {
                                 className="flex flex-col space-y-4"
                                 onSubmit={handleSubmit(submitForm)}
                             >
-                                <Input {...register("name")} className="max-w-lg flex-1 text-black" placeholder="Name" type="text" />
-                                <Input {...register("phone")} className="max-w-lg flex-1 text-black" placeholder="Nomor WhatsApp +62xxxxxxx" type="text" />
-                                <Textarea {...register("message")} className="max-w-lg flex-1 text-black" placeholder="Halo Admin😎" />
+                                <div>
+                                    <Input {...register("name")} className="max-w-lg flex-1 text-black" placeholder="Nama Lengkap" type="text" />
+                                    {errors.name ? (
+                                        <p className="text-xs text-red-500 mt-1">Nama tidak boleh kosong</p>
+                                    ) : null}
+                                </div>
+                                <Input {...register("phone")} className="max-w-lg flex-1 text-black sr-only" placeholder="Nomor WhatsApp +62xxxxxxx" type="text" />
+                                <div>
+                                    <Textarea {...register("message")} className="max-w-lg flex-1 text-black" placeholder="Halo Admin😎" />
+                                    {errors.message ? (
+                                        <p className="text-xs text-red-500 mt-1">Pesan tidak boleh kosong</p>
+                                    ) : null}
+                                </div>
                                 <Button
                                     className="bg-red-500 hover:bg-red-600 text-gray-50"
                                     type="submit"
