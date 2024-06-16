@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={cn(
         archivo.variable,
         dm_sans.variable,
-        "w-full h-full bg-blue-500"
+        "w-full h-full"
       )}>{children}</body>
     </html>
   );
