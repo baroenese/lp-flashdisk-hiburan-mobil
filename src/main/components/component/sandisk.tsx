@@ -82,14 +82,14 @@ export default function Sandisk() {
         <>
             <main className="w-full bg-red-500" id="home">
                 <section className="w-full py-12 pt-24 md:py-24 lg:py-32 bg-gradient-to-r from-gray-900 to-black dark:from-gray-900 dark:to-black">
-                    <div className="container px-4 md:px-6 space-y-6 md:space-y-10">
-                        <div className="grid mx-auto max-w-full gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
+                    <div className="w-full px-4 md:px-6 space-y-6 md:space-y-10">
+                        <div className="grid mx-auto max-w-7xl gap-4 px-4 sm:px-6 lg:px-10 lg:grid-cols-2 lg:gap-16">
                             <div className="flex flex-col justify-center ">
                                 <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] text-red-500">
                                     {/* Elevate Your Business with Our Solutions */}
                                     Ribuan Lagu & Video Dalam 1 Flashdisk
                                 </h1>
-                                <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl dark:text-gray-400">
+                                <p className="text-gray-300 md:text-xl dark:text-gray-400">
                                     Hadirkan Hiburan Tanpa Batas pada Perjalanan Anda dengan Flashdisk Hiburan Mobil Terbaik!
                                 </p>
                                 <div className="mt-6">
@@ -102,16 +102,25 @@ export default function Sandisk() {
                                     </Link>
                                 </div>
                             </div>
-                            <div className="hidden md:block">
-                                <div className="relative overflow-hidden shadow-md shadow-red-500 rounded-xl p-0">
+                            <div className="hidden lg:block">
+                                {/* <div className="relative overflow-hidden shadow-md shadow-red-500 rounded-xl p-0">
                                     <Image
                                         src={dua}
                                         alt="Promo"
-                                        className="mx-auto aspect-video overflow-hidden rounded-xl object-cover w-full"
+                                        className="mx-auto aspect-h-1 aspect-w-1 overflow-hidden rounded-xl object-cover w-full h-80"
                                         height={550}
                                         width={550}
                                     />
-                                </div>
+                                </div> */}
+                                 <div className="relative h-full w-full overflow-hidden shadow-md shadow-red-500 rounded-xl bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <Image
+                                        src={dua}
+                                        alt="Promo"
+                                        className="h-full w-full object-cover object-center"
+                                        height={550}
+                                        width={550}
+                                    />
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -123,7 +132,7 @@ export default function Sandisk() {
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-red-500">
                                     Produk Kami
                                 </h2>
-                                <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                <p className="max-w-7xl text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                                     Dapatkan Flashdisk Hiburan Terbaik untuk Mobil Anda dan nikmati perjalanan <span className="inline-block 2xl:hidden">yang lebih</span> menyenangkan.
                                 </p>
                             </div>
@@ -417,7 +426,7 @@ export default function Sandisk() {
                 </section>
 
                 <section className="w-full py-12 md:py-24 lg:py-32  bg-gray-900 dark:bg-gray-800">
-                    <div className="w-full grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+                    <div className="w-full sm:max-w-7xl mx-auto grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
                         <Image
                             src={dua}
                             alt="Promo 2024"
@@ -470,7 +479,7 @@ export default function Sandisk() {
                                 </p>
                             </div>
                         </div>
-                        <div className="mx-auto w-full space-y-2">
+                        <div className="mx-auto w-full sm:max-w-sm space-y-2">
                             <form
                                 className="flex flex-col space-y-4"
                                 onSubmit={handleSubmit(submitForm)}
