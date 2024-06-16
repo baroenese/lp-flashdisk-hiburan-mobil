@@ -26,10 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="h-full sscroll-smooth">
       <body className={cn(
         archivo.variable,
-        dm_sans.variable
+        dm_sans.variable,
+        "w-full h-full bg-blue-500"
       )}>{children}</body>
     </html>
   );

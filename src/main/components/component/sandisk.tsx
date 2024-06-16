@@ -79,28 +79,11 @@ export default function Sandisk() {
     }
 
     return (
-        <div className="flex flex-col min-h-[100dvh] bg-gray-900 text-white dark:bg-gray-900 dark:text-white">
-            <header className="px-4 lg:px-6 h-14 flex items-center fixed inset-0 bg-gradient-to-r from-gray-900 to-black dark:from-gray-900 dark:to-black">
-                <Link className="flex items-center justify-center space-x-2" href="#">
-                    <Music2Icon className="h-6 w-6 text-red-500" />
-                    <span className="lg:leading-tighter text-base font-bold tracking-tighter sm:text-lg md:text-xl text-red-500">Flashdisk Hiburan Mobil</span>
-                </Link>
-                <nav className="ml-auto flex gap-4 sm:gap-6">
-                    <Link className="text-sm font-medium hover:text-red-500 transition-colors" href="#produk">
-                        Produk
-                    </Link>
-                    <Link className="text-sm font-medium hover:text-red-500 transition-colors" href="#testimonial">
-                        Testimonial
-                    </Link>
-                    <Link className="text-sm font-medium hover:text-red-500 transition-colors hidden lg:block" href="#kontak">
-                        Kontak
-                    </Link>
-                </nav>
-            </header>
-            <main className="flex-1" id="home">
+        <>
+            <main className="w-full bg-red-500" id="home">
                 <section className="w-full py-12 pt-24 md:py-24 lg:py-32 bg-gradient-to-r from-gray-900 to-black dark:from-gray-900 dark:to-black">
                     <div className="container px-4 md:px-6 space-y-6 md:space-y-10">
-                        <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
+                        <div className="grid mx-auto max-w-full gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
                             <div className="flex flex-col justify-center ">
                                 <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] text-red-500">
                                     {/* Elevate Your Business with Our Solutions */}
@@ -134,7 +117,7 @@ export default function Sandisk() {
                     </div>
                 </section>
                 <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800 dark:bg-gray-800" id="produk">
-                    <div className="container px-4 md:px-6 space-y-12">
+                    <div className="w-full px-4 md:px-6 space-y-12">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-red-500">
@@ -200,12 +183,12 @@ export default function Sandisk() {
                     </div>
                 </section>
                 <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-900 dark:bg-gray-900" id="testimonial">
-                    <div className="container px-4 md:px-6">
+                    <div className="w-full px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <div className="inline-block rounded-lg bg-red-500 px-3 py-1 text-sm text-white">Testimonial</div>
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-red-500">Apa Yang Pelanggan Kami Katakan</h2>
-                                <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                <p className="text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                                     {/* Hear from the people who love using our platform to build their web applications. */}
                                     Dengarkan dari orang-orang yang senang menggunakan produk flashdisk hiburan mobil kami karena sangat <span className="italic">worth it</span> bagi mereka.
                                 </p>
@@ -379,7 +362,7 @@ export default function Sandisk() {
                 </section>
 
                 <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800 dark:bg-gray-800">
-                    <div className="container px-4 md:px-6">
+                    <div className="w-full px-4 md:px-6">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <div className="inline-block rounded-lg bg-red-500 px-3 py-1 text-sm text-gray-50 dark:bg-red-400 dark:text-gray-900">
@@ -397,7 +380,7 @@ export default function Sandisk() {
                             <Image
                                 src={tiga}
                                 alt="Quality"
-                                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center w-full order-first lg:order-last"
                                 height={310}
                                 width={550}
                             />
@@ -433,8 +416,8 @@ export default function Sandisk() {
                     </div>
                 </section>
 
-                <section className="w-full py-12 md:py-24 lg:py-32">
-                    <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+                <section className="w-full py-12 md:py-24 lg:py-32  bg-gray-900 dark:bg-gray-800">
+                    <div className="w-full grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
                         <Image
                             src={dua}
                             alt="Promo 2024"
@@ -450,7 +433,7 @@ export default function Sandisk() {
                             <p className="max-w-[600px] text-gray-50 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                                 Flashdisk musik kami menawarkan kapasitas penyimpanan yang besar, dan daya tahan kuat. Tingkatkan pengalaman musik Anda dengan teknologi canggih kami.
                             </p>
-                            <ul className="grid gap-2">
+                            <ul className="grid gap-2 text-white">
                                 <li className="flex items-center gap-2">
                                     <CheckIcon className="h-4 w-4 text-red-500 dark:text-red-400" />
                                     Format Video Mp4/Divx/MPG <span className="text-xs">{`(Menyesuaikan dengan Head Unit)`}</span>
@@ -478,16 +461,16 @@ export default function Sandisk() {
                 </section>
 
                 <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800 dark:bg-gray-800" id="kontak">
-                    <div className="container px-4 md:px-6 space-y-12">
+                    <div className="w-full px-4 md:px-6 space-y-12">
                         <div className="flex flex-col items-center justify-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-red-500">Hubungi Kami</h2>
-                                <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                                <p className="text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                                     Tim sales kami siap menjawab pertanyaan dan memberikan solusi yang paling tepat untuk Anda.
                                 </p>
                             </div>
                         </div>
-                        <div className="mx-auto w-full max-w-sm space-y-2">
+                        <div className="mx-auto w-full space-y-2">
                             <form
                                 className="flex flex-col space-y-4"
                                 onSubmit={handleSubmit(submitForm)}
@@ -516,8 +499,8 @@ export default function Sandisk() {
                     </div>
                 </section>
             </main>
-            <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800 dark:border-gray-800">
-                <p className="text-xs text-gray-400 dark:text-gray-400">&copy; {(new Date()).getFullYear().toString()} Flashdisk Musik Mobil.</p>
+            <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-gray-800 dark:border-gray-800 bg-gray-900 dark:bg-gray-900 text-gray-50">
+                <p className="text-xs text-gray-400 dark:text-gray-400">&copy; {(new Date()).getFullYear().toString()} Flashdisk Hiburan Mobil.</p>
                 <nav className="sm:ml-auto flex gap-4 sm:gap-6">
                     <Link className="text-xs hover:text-red-500 transition-colors dark:hover:text-red-500" href="#produk">
                         Produk
@@ -530,27 +513,7 @@ export default function Sandisk() {
                     </Link>
                 </nav>
             </footer>
-        </div>
-    )
-}
-
-function Music2Icon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <circle cx="8" cy="18" r="4" />
-            <path d="M12 18V2l7 4" />
-        </svg>
+        </>
     )
 }
 
