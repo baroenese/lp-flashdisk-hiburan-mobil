@@ -163,7 +163,8 @@ export default function Sandisk() {
                                     <div>
                                         <Link
                                             className="inline-flex h-8 w-full items-center justify-center rounded-md bg-red-500 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
-                                            href="#"
+                                            href={`https://wa.me/${CONTACT_WHATSAPP}?text=Pesan+Flashdisk+Hiburan+Mobil+32GB+Rp160.000`}
+                                            target="_blank"
                                         >
                                             Pesan Sekarang
                                         </Link>
@@ -187,7 +188,8 @@ export default function Sandisk() {
                                     <div>
                                         <Link
                                             className="inline-flex h-8 w-full items-center justify-center rounded-md bg-red-500 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
-                                            href="#"
+                                            href={`https://wa.me/${CONTACT_WHATSAPP}?text=Pesan+Flashdisk+Hiburan+Mobil+64GB+Rp185.000`}
+                                            target="_blank"
                                         >
                                             Pesan Sekarang
                                         </Link>
