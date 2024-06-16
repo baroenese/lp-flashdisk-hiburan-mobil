@@ -42,7 +42,6 @@ import testi5 from "@/main/assets/testi/5.jpg"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useRouter } from "next/navigation"
 
 const FormSchema = z.object({
     name: z.string().min(1).max(100),
@@ -53,7 +52,6 @@ const FormSchema = z.object({
 type FormType = z.infer<typeof FormSchema>
 
 export default function Sandisk() {
-    const router = useRouter()
     const {
         register,
         handleSubmit,
@@ -209,24 +207,26 @@ export default function Sandisk() {
                                 <div className="grid gap-4">
                                     <div className="flex flex-col items-start gap-2 rounded-lg bg-gray-900 p-4 shadow-lg">
                                         <div className="flex items-center gap-2">
-                                            <img
-                                                alt="Avatar"
-                                                className="h-10 w-10 rounded-full"
-                                                height="40"
-                                                src="/placeholder.svg"
-                                                style={{
-                                                    aspectRatio: "40/40",
-                                                    objectFit: "cover",
-                                                }}
-                                                width="40"
-                                            />
+                                            <picture>
+                                                <img
+                                                    alt="Avatar"
+                                                    className="h-10 w-10 rounded-full"
+                                                    height="40"
+                                                    src="/placeholder.svg"
+                                                    style={{
+                                                        aspectRatio: "40/40",
+                                                        objectFit: "cover",
+                                                    }}
+                                                    width="40"
+                                                />
+                                            </picture>
                                             <div>
                                                 <h3 className="text-lg font-semibold">@**9</h3>
                                                 <p className="text-sm text-gray-400">Flashdisk Hiburan Mobil</p>
                                             </div>
                                         </div>
                                         <p className="text-gray-400">
-                                            "Mantap kualitas video dan lagu mp3nya gak pecah di headunit ,thanksq gan moga makin laris lapaknya."
+                                            {`"Mantap kualitas video dan lagu mp3nya gak pecah di headunit ,thanksq gan moga makin laris lapaknya."`}
                                         </p>
                                         <div className="mt-2 rounded-lg border border-slate-200 border-gray-800 dark:border-slate-800">
                                             <Image
@@ -240,24 +240,26 @@ export default function Sandisk() {
                                     </div>
                                     <div className="flex flex-col items-start gap-2 rounded-lg bg-gray-900 p-4 shadow-lg">
                                         <div className="flex items-center gap-2">
-                                            <img
-                                                alt="Avatar"
-                                                className="h-10 w-10 rounded-full"
-                                                height="40"
-                                                src="/placeholder.svg"
-                                                style={{
-                                                    aspectRatio: "40/40",
-                                                    objectFit: "cover",
-                                                }}
-                                                width="40"
-                                            />
+                                            <picture>
+                                                <img
+                                                    alt="Avatar"
+                                                    className="h-10 w-10 rounded-full"
+                                                    height="40"
+                                                    src="/placeholder.svg"
+                                                    style={{
+                                                        aspectRatio: "40/40",
+                                                        objectFit: "cover",
+                                                    }}
+                                                    width="40"
+                                                />
+                                            </picture>
                                             <div>
                                                 <h3 className="text-lg font-semibold">A**h S**h</h3>
                                                 <p className="text-sm text-gray-400">Flashdisk Hiburan Mobil</p>
                                             </div>
                                         </div>
                                         <p className="text-gray-400">
-                                            "Paket flasdisk audio mobil sdh sy terima real pic amanah pengiriman sangat cepat."
+                                            {`"Paket flasdisk audio mobil sdh sy terima real pic amanah pengiriman sangat cepat."`}
                                         </p>
                                         <div className="mt-2 rounded-lg border border-slate-200 border-gray-800 dark:border-slate-800">
                                             <Image
@@ -271,6 +273,7 @@ export default function Sandisk() {
                                     </div>
                                     <div className="flex flex-col items-start gap-2 rounded-lg bg-gray-900 p-4 shadow-lg">
                                         <div className="flex items-center gap-2">
+                                            <picture>
                                             <img
                                                 alt="Avatar"
                                                 className="h-10 w-10 rounded-full"
@@ -282,13 +285,14 @@ export default function Sandisk() {
                                                 }}
                                                 width="40"
                                             />
+                                            </picture>
                                             <div>
                                                 <h3 className="text-lg font-semibold">P**i  A** D**i</h3>
                                                 <p className="text-sm text-gray-400">Flashdisk Hiburan Mobil</p>
                                             </div>
                                         </div>
                                         <p className="text-gray-400">
-                                            "Mantap sekali ayok buruan order disini."
+                                            {`"Mantap sekali ayok buruan order disini."`}
                                         </p>
                                         <div className="mt-2 rounded-lg border border-slate-200 border-gray-800 dark:border-slate-800">
                                             <Image
@@ -306,6 +310,7 @@ export default function Sandisk() {
                                 <div className="grid gap-4">
                                     <div className="flex flex-col items-start gap-2 rounded-lg bg-gray-900 p-4 shadow-lg">
                                         <div className="flex items-center gap-2">
+                                            <picture>
                                             <img
                                                 alt="Avatar"
                                                 className="h-10 w-10 rounded-full"
@@ -317,13 +322,14 @@ export default function Sandisk() {
                                                 }}
                                                 width="40"
                                             />
+                                            </picture>
                                             <div>
                                                 <h3 className="text-lg font-semibold">D** O**H</h3>
                                                 <p className="text-sm text-gray-400">Flashdisk Hiburan Mobil</p>
                                             </div>
                                         </div>
                                         <p className="text-gray-400">
-                                            "Produknya sampai dngn TOP,,,, brg berpungsi Rekomendasi sudah produknya. Terimakasih."
+                                            {`"Produknya sampai dngn TOP,,,, brg berpungsi Rekomendasi sudah produknya. Terimakasih."`}
                                         </p>
                                         <div className="mt-2 rounded-lg border border-slate-200 border-gray-800 dark:border-slate-800">
                                             <Image
@@ -337,24 +343,26 @@ export default function Sandisk() {
                                     </div>
                                     <div className="flex flex-col items-start gap-2 rounded-lg bg-gray-900 p-4 shadow-lg">
                                         <div className="flex items-center gap-2">
-                                            <img
-                                                alt="Avatar"
-                                                className="h-10 w-10 rounded-full"
-                                                height="40"
-                                                src="/placeholder.svg"
-                                                style={{
-                                                    aspectRatio: "40/40",
-                                                    objectFit: "cover",
-                                                }}
-                                                width="40"
-                                            />
+                                            <picture>
+                                                <img
+                                                    alt="Avatar"
+                                                    className="h-10 w-10 rounded-full"
+                                                    height="40"
+                                                    src="/placeholder.svg"
+                                                    style={{
+                                                        aspectRatio: "40/40",
+                                                        objectFit: "cover",
+                                                    }}
+                                                    width="40"
+                                                />  
+                                            </picture>
                                             <div>
                                                 <h3 className="text-lg font-semibold">D**y P**a</h3>
                                                 <p className="text-sm text-gray-400">Flashdisk Hiburan Mobil</p>
                                             </div>
                                         </div>
                                         <p className="text-gray-400">
-                                            "Barang ori alhmdllh brfungsi dgn baik lagu dn videonya lngkap sukses sllu but tokonya"
+                                            {`"Barang ori alhmdllh brfungsi dgn baik lagu dn videonya lngkap sukses sllu but tokonya"`}
                                         </p>
                                         <div className="mt-2 rounded-lg border border-slate-200 border-gray-800 dark:border-slate-800">
                                             <Image
