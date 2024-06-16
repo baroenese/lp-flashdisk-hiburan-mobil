@@ -50,7 +50,7 @@ export default function KontakKami() {
                         </p>
                     </div>
                 </div>
-                <div className="mx-auto w-full space-y-2">
+                <div className="mx-auto w-full sm:max-w-sm space-y-2">
                     <form
                         className="flex flex-col space-y-4"
                         onSubmit={handleSubmit(submitForm)}
