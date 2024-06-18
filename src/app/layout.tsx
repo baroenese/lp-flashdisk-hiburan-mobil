@@ -17,7 +17,7 @@ const dm_sans = DM_Sans({
 
 export const metadata: Metadata = {
   title: "Flashsdisk Hiburan Mobil",
-  description: "Flashdisk hiburan mobil, promo hiburan musik mobil, hiburan musik mobil, flashdisk original isi ribuan lagu & video, flashdisk bisa karaoke.",
+  description: "Flashdisk hiburan mobil, promo flashdisk hiburan mobil, hiburan mobil, flashdisk original, ribuan lagu & video dalam satu flashdisk, flashdisk mobil bisa karaoke, COD (Bayar Saat Barang Sampai).",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full sscroll-smooth">
+    <html lang="en" className="h-full scroll-smooth">
       <body className={cn(
         archivo.variable,
         dm_sans.variable,

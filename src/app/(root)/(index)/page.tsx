@@ -11,7 +11,7 @@ import testi4 from "@/main/assets/testi/4.jpg"
 import testi5 from "@/main/assets/testi/5.jpg"
 import testi6 from "@/main/assets/testi/6.jpg"
 import dynamic from "next/dynamic"
-import { CONTACT_WHATSAPP } from "@/utils"
+import { ORDER_LINK } from "@/utils"
 
 const KontakKami = dynamic(() => import("./_internal/components/kontak-kami"), { ssr: false })
 
@@ -85,7 +85,7 @@ export default function Page() {
                                 <div className="mt-6">
                                     <Link
                                         className="inline-flex h-10 items-center justify-center rounded-md bg-red-500 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
-                                        href={`https://wa.me/${CONTACT_WHATSAPP}?text=Halo+admin+Flashdisk+Hiburan+Mobil`}
+                                        href={ORDER_LINK}
                                         target="_blank"
                                     >
                                         Pesan Sekarang
@@ -137,10 +137,10 @@ export default function Page() {
                                     <div>
                                         <Link
                                             className="inline-flex h-10 w-full items-center justify-center rounded-md bg-red-500 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
-                                            href={`https://wa.me/${CONTACT_WHATSAPP}?text=Pesan+Flashdisk+Hiburan+Mobil+32GB+Rp160.000`}
+                                            href={ORDER_LINK}
                                             target="_blank"
                                         >
-                                            Pesan Sekarang
+                                            Beli Sekarang
                                         </Link>
                                     </div>
                                 </div>
@@ -162,10 +162,10 @@ export default function Page() {
                                     <div>
                                         <Link
                                             className="inline-flex h-10 w-full items-center justify-center rounded-md bg-red-500 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
-                                            href={`https://wa.me/${CONTACT_WHATSAPP}?text=Pesan+Flashdisk+Hiburan+Mobil+64GB+Rp185.000`}
+                                            href={ORDER_LINK}
                                             target="_blank"
                                         >
-                                            Pesan Sekarang
+                                            Beli Sekarang
                                         </Link>
                                     </div>
                                 </div>
@@ -439,7 +439,7 @@ export default function Page() {
                             <div className="mt-6">
                                 <Link
                                     className="inline-flex h-10  w-full sm:w-auto items-center justify-center rounded-md bg-red-500 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-700 disabled:pointer-events-none disabled:opacity-50 dark:bg-red-400 dark:text-gray-900 dark:hover:bg-red-500 dark:focus-visible:ring-red-600"
-                                    href={`https://wa.me/${CONTACT_WHATSAPP}?text=Halo+admin+Flashdisk+Hiburan+Mobil`}
+                                    href={ORDER_LINK}
                                     target="_blank"
                                 >
                                     Pesan Sekarang
