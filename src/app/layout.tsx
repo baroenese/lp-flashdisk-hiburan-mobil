@@ -3,6 +3,7 @@ import "./globals.css";
 import { Archivo } from 'next/font/google'
 import { DM_Sans } from 'next/font/google'
 import { cn } from "@/main/utils";
+import MetaPixel from "./_internal/components/meta-pixels";
 
 const archivo = Archivo({
   subsets: ['latin'],
@@ -31,7 +32,10 @@ export default function RootLayout({
         archivo.variable,
         dm_sans.variable,
         "w-full h-full text-white bg-white"
-      )}>{children}</body>
+      )}>
+        {children}
+        <MetaPixel />
+      </body>
     </html>
   );
 }
