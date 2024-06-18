@@ -37,7 +37,7 @@ function CheckIcon(props: { className: string }) {
 export default function Page() {
     return (
         <>
-            <header className="fixed inset-0 h-14 bg-gradient-to-r from-gray-900 to-black dark:from-gray-900 dark:to-black">
+            <header className="fixed inset-0 z-50 h-14 bg-gradient-to-r from-gray-900 to-black dark:from-gray-900 dark:to-black">
                 <div className="px-4 lg:px-6 flex items-center justify-between h-full">
                     <Link className="flex items-center justify-center space-x-2" href="#">
                         <svg
